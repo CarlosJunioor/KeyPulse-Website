@@ -13,3 +13,15 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.riscado {
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+  transition: color 0.5s ease;
+  z-index: -1;
+}
+
+.footer-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px #f26241;
+}

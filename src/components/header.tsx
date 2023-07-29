@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-import Logo from "../assets/logo.png";
+import Logo from "../assets/images/logo.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="bg-[#1D1D1D]/95 backdrop-blur-md drop-shadow-md w-full text-white flex h-20 justify-between items-center px-8 fixed top-0 left-0 ">
+    <div className="bg-dark-primary/95 backdrop-blur-md drop-shadow-md w-full text-white flex h-20 justify-between items-center px-8 fixed top-0 left-0 z-50">
       <div
         className="w-12  md:w-16 cursor-pointer"
         onClick={() => handleClick("")}

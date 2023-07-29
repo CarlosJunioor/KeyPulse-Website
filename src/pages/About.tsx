@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function About() {
-  return <div>about</div>;
+  return <div className="min-h-screen">about</div>;
 }
