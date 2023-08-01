@@ -18,10 +18,19 @@
   color: transparent;
   -webkit-text-stroke: 2px black;
   transition: color 0.5s ease;
-  z-index: -1;
+  z-index: 0;
+  cursor: default;
 }
 
 .footer-stroke {
   color: transparent;
   -webkit-text-stroke: 1px #f26241;
+}
+
+.bg-fade {
+  background-image: url("./assets/images/bg-fade.png");
+}
+
+.bg-home {
+  background-image: url("./assets/images/v.jpg");
 }

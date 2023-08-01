@@ -19,7 +19,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="bg-dark-primary/95 backdrop-blur-md drop-shadow-md w-full text-white flex h-20 justify-between items-center px-8 fixed top-0 left-0 z-50">
+    <div className="bg-black/80 backdrop-blur-md drop-shadow-md w-full border-b border-neutral-700 text-white flex h-20 justify-between items-center px-8 fixed top-0 left-0 z-50">
       <div
         className="w-12  md:w-16 cursor-pointer"
         onClick={() => handleClick("")}
