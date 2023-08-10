@@ -1,4 +1,4 @@
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/Logo.png";
 import VS from "../assets/images/VS.svg";
 import DiagonalLine from "../assets/images/DiagonalLine.svg";
 
