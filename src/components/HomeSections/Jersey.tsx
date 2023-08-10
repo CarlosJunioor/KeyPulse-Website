@@ -2,7 +2,7 @@ import { SectionTitle } from "../SectionTitle";
 import JerseyVideo from "../../assets/Jersey.mp4";
 import { VideoPlayer } from "../VideoPlayer";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../utils/Variants";
+import { fadeIn } from "../../utils/variants";
 
 export const Jersey = () => {
   return (

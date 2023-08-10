@@ -1,4 +1,4 @@
-import { fadeIn } from "../../utils/Variants";
+import { fadeIn } from "../../utils/variants";
 import { Circle } from "../Circle";
 import { motion } from "framer-motion";
 
