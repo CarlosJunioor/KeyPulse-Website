@@ -9,7 +9,7 @@ import { MatchesCard } from "../MatchesCard";
 import { SectionTitle } from "../SectionTitle";
 import bright from "../../assets/images/bright.svg";
 import brightWhite from "../../assets/images/bright-white.svg";
-import { fadeIn } from "../../utils/Variants";
+import { fadeIn } from "../../utils/variants";
 
 export const NewsMatches = () => {
   return (

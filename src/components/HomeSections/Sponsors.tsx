@@ -4,7 +4,7 @@ import { SponsorsCard } from "../SponsorsCard";
 import { motion } from "framer-motion";
 import Bright from "../../assets/images/bright.svg";
 import BrightWhite from "../../assets/images/bright-white.svg";
-import { fadeIn } from "../../utils/Variants";
+import { fadeIn } from "../../utils/variants";
 
 export const Sponsors = () => {
   return (

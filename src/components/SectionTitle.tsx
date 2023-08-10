@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
-import { fadeIn } from "../utils/Variants";
+import { fadeIn } from "../utils/variants";
 
 interface SectionProps {
   title: string;
