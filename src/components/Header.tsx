@@ -19,34 +19,34 @@ export const Header = () => {
   };
 
   return (
-    <div className="bg-black/80 backdrop-blur-md drop-shadow-md w-full border-b border-neutral-700 text-white flex h-20 justify-between items-center px-8 fixed top-0 left-0 z-50">
+    <div className="bg-dark-primary/50 backdrop-blur-md drop-shadow-md w-full border-b border-neutral-700 text-white flex h-20 justify-between items-center px-8 fixed top-0 left-0 z-50">
       <div
-        className="w-12  md:w-16 cursor-pointer"
+        className="w-12 md:w-16 cursor-pointer"
         onClick={() => handleClick("")}
       >
         <img src={Logo} />
       </div>
-      <ul className="md:flex gap-6 font-medium hidden">
+      <ul className="md:flex font-medium hidden">
         <li
-          className="p-5 rounded hover:bg-neutral-800 hover:text-yellow-500 cursor-pointer"
-          onClick={() => handleClick("")}
+          className="py-2 px-12 hover:text-orange-primary hover:drop-shadow-2xl hover:shadow-white cursor-pointer transition-all"
+          onClick={() => handleClick("/")}
         >
           HOME
         </li>
         <li
-          className="p-5 rounded hover:bg-neutral-800 hover:text-yellow-500 cursor-pointer"
+          className="py-2 px-12 hover:text-orange-primary hover:drop-shadow-2xl hover:shadow-white cursor-pointer border-l-2 border-neutral-800 transition-all"
           onClick={() => handleClick("about")}
         >
           ABOUT
         </li>
         <li
-          className="p-5 rounded hover:bg-neutral-800 hover:text-yellow-500 cursor-pointer"
+          className="py-2 px-12 hover:text-orange-primary hover:drop-shadow-2xl hover:shadow-white cursor-pointer border-l-2 border-neutral-800 transition-all"
           onClick={() => handleClick("teams")}
         >
           TEAMS
         </li>
         <li
-          className="p-5 rounded hover:bg-neutral-800 hover:text-yellow-500 cursor-pointer"
+          className="py-2 px-12 hover:text-orange-primary hover:drop-shadow-2xl hover:shadow-white cursor-pointer border-l-2 border-neutral-800 transition-all"
           onClick={() => handleClick("news")}
         >
           NEWS

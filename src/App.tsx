@@ -5,11 +5,9 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App w-full bg-black pt-20">
+    <div className="App w-full pt-20">
       <Header />
-      <div className="bg-white ">
-        <Outlet />
-      </div>
+      <Outlet />
       <Footer />
     </div>
   );

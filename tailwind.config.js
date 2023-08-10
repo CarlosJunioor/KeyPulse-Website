@@ -8,16 +8,20 @@ export default {
     extend: {
       colors: {
         dark: {
-          primary: '#0D0D0D',
-          secondary: '#252525',
+          primary: '#070707',
+          secondary: '#101010',
         },
         orange:{
-          primary: '#F26241',
-          light: '#F2D43D',
+          primary: '#FD690F',
+          light: '#FF6B00',
         }
       }
       
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [],
+  },
+
 }
