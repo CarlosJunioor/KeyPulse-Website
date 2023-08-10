@@ -6,10 +6,68 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  background-color: #070707;
+  color: #fff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: primary;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #070707;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #fd690f;
+  border-radius: 14px;
+  border: 3px solid #070707;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #f9c91f;
+}
+
+.footer-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px #ff6c1a;
+}
+
+.bg-fade {
+  background-image: url("./assets/images/bg-fade.png");
+}
+
+.bg-texture {
+  background-image: url("./assets/images/texture.png");
+}
+
+.bg-home {
+  background-image: url("./assets/images/home-bg.png");
+}
+
+.gradient {
+  background: radial-gradient(
+    423.59% 50.02% at 50% 42.34%,
+    #ff6c1a 0%,
+    #fd6814 50.52%,
+    #ff6b00 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-shadow: 0px 4px 20px rgba(242, 98, 65, 0.2);
 }
