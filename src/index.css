@@ -47,6 +47,9 @@
 .bg-fade {
   background-image: url("./assets/images/bg-fade.png");
 }
+.fade {
+  background-image: url("./assets/images/fade.png");
+}
 
 .bg-texture {
   background-image: url("./assets/images/texture.png");
@@ -66,8 +69,4 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-shadow: 0px 4px 20px rgba(242, 98, 65, 0.2);
 }
