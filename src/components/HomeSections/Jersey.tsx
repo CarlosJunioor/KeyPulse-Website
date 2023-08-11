@@ -6,7 +6,7 @@ import { fadeIn } from "../../utils/variants";
 
 export const Jersey = () => {
   return (
-    <section className="w-full min-h-screen pb-20 pt-14 bg-dark-primary  bg-cover bg-center">
+    <section className="w-full pb-20 pt-14 bg-dark-primary bg-cover bg-center">
       <div className="divider bg-neutral-800 h-px mb-20" />
 
       <h2 className="text-gray-300"> Ignite the Fashion. Amplify the Game!</h2>
