@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App w-full pt-20">
+    <div className="App w-full">
       <Header />
       <Outlet />
       <Footer />

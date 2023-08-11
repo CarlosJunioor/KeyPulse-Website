@@ -6,14 +6,17 @@ import { fadeIn } from "../../utils/variants";
 
 export const Jersey = () => {
   return (
-    <section className="w-full min-h-screen pb-20 pt-14 bg-dark-primary bg-fade bg-cover bg-center">
-      <SectionTitle title="JERSEY COLLECTION">
-        Ignite the Fashion. Amplify the Game!
+    <section className="w-full min-h-screen pb-20 pt-14 bg-dark-primary  bg-cover bg-center">
+      <div className="divider bg-neutral-800 h-px mb-20" />
+
+      <h2 className="text-gray-300"> Ignite the Fashion. Amplify the Game!</h2>
+      <SectionTitle>
+        <span className="text-orange-primary">JERSEY</span> COLLECTION
       </SectionTitle>
 
       <motion.div
         className="flex justify-center items-center w-full mt-20"
-        variants={fadeIn("up", 0)}
+        variants={fadeIn("up", 0.2)}
         initial={"hidden"}
         whileInView={"show"}
         viewport={{ once: true }}

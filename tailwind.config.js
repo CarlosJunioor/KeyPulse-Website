@@ -10,6 +10,7 @@ export default {
         dark: {
           primary: '#070707',
           secondary: '#101010',
+          50: '#191919',
         },
         orange:{
           primary: '#FD690F',
