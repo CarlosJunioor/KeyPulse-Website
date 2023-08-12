@@ -70,3 +70,26 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  opacity: 0.7 !important;
+  background-color: #fff !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background-color: #ff6b00 !important;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: -42px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  margin: 0px !important;
+  color: #dcdcdc !important;
+}

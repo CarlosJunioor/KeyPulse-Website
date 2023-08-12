@@ -2,7 +2,8 @@ export const LOLMatchData = [
   {
     id: 1,
     game: "League of Legends",
-    championship: "League of Legends Championship Series",
+    championship:
+      "League of Legends Championship SeriesChampionship SeriesChampionship Series",
     hour: "1:00 PDT",
     date: "12/12/2021",
   },

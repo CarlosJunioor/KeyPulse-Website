@@ -14,8 +14,8 @@ import { fadeIn } from "../../utils/variants";
 
 export const LatestNews = () => {
   return (
-    <section className="w-full pb-40 flex flex-col items-center pt-20 overflow-hidden relative">
-      <motion.div className="max-w-7xl w-full flex flex-col items-center">
+    <section className="w-full pb-40 flex flex-col items-center pt-20 overflow-hidden ">
+      <motion.div className="max-w-7xl w-full flex flex-col items-center relative">
         <h2 className="text-gray-300">
           Watch and support your favorite esports team!
         </h2>
@@ -23,7 +23,7 @@ export const LatestNews = () => {
           LATEST <span className="text-orange-primary">NEWS</span>
         </SectionTitle>
         <motion.div
-          className="w-full max-w-[856px] px-6"
+          className="w-full max-w-[900px] px-6"
           variants={fadeIn("up", 0.2)}
           initial={"hidden"}
           whileInView={"show"}
@@ -32,14 +32,18 @@ export const LatestNews = () => {
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
             pagination={{
               clickable: true,
+              el: ".swiper-pagination",
             }}
-            navigation={true}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
           >
@@ -56,6 +60,9 @@ export const LatestNews = () => {
               <img src={News4} />
             </SwiperSlide>
           </Swiper>
+          <div className="swiper-button-prev" />
+          <div className="swiper-button-next" />
+          <div className="swiper-pagination" />
         </motion.div>
       </motion.div>
       <img src={Bright} className="absolute top-0 -left-20 -z-10" />
