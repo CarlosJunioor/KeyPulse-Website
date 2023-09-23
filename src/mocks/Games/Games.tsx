@@ -9,19 +9,19 @@ export const Games: IGames[] = [
   {
     id: 1,
     name: "Valorant",
-    logo: "/public/images/valorant.png",
-    banner: "/public/images/banner-valorant.jpg",
+    logo: "/images/valorant.png",
+    banner: "/images/banner-valorant.jpg",
   },
   {
     id: 2,
     name: "League of Legends",
-    logo: "/public/images/League-of-legends.png",
-    banner: "/public/images/banner-league-of-legends.jpg",
+    logo: "/images/League-of-legends.png",
+    banner: "/images/banner-league-of-legends.jpg",
   },
   {
     id: 3,
     name: "Wild Rift",
-    logo: "/public/images/wild-rift.png",
-    banner: "/public/images/banner-wild-rift.png",
+    logo: "/images/wild-rift.png",
+    banner: "/images/banner-wild-rift.png",
   },
 ];
