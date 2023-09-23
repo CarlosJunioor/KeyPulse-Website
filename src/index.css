@@ -55,6 +55,10 @@
   background-image: url("./assets/images/texture.png");
 }
 
+.bg-playerTexture {
+  background-image: url("./assets/images/player-texture.png");
+}
+
 .bg-home {
   background-image: url("./assets/images/home-bg.png");
 }
