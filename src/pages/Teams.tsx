@@ -35,7 +35,7 @@ export const Teams = () => {
           <GameSelect onSelect={handleGameSelect} selectedGame={selectedGame} />
         </div>
       </div>
-      <div className="flex flex-wrap justify-center pt-20 gap-6">
+      <div className="flex flex-wrap justify-center pt-20 gap-6 z-10">
         <PlayerCard
           img={PlayerImg}
           name="Mads Brock-Pedersen"
@@ -56,9 +56,9 @@ export const Teams = () => {
         />
       </div>
 
-      <img src={BlueBall} className="absolute right-0 bottom-0" />
+      <img src={BlueBall} className="absolute right-0 bottom-0 -z-10" />
 
-      <img src={OrangeBall} className="absolute -top-60 -left-72" />
+      <img src={OrangeBall} className="absolute -top-60 -left-72 -z-10" />
     </main>
   );
 };
