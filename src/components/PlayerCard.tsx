@@ -18,7 +18,7 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({
   twitter,
 }) => {
   return (
-    <div className="bg-playerTexture max-w-xs relative shadow-2xl shadow-orange-primary/30 group">
+    <div className="bg-playerTexture max-w-xs relative shadow-2xl shadow-orange-primary/10 group">
       <div className="px-8 pt-5">
         <img src={img} />
         <div className="absolute top-5 right-5 gap-2 flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-500">

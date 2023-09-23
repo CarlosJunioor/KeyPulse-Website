@@ -7,7 +7,7 @@ import {
   ValorantMatchData,
   WildriftMatchData,
 } from "../../mocks/Matches/MatchesData";
-import { Games, IGames } from "../../mocks/Options/Games";
+import { Games, IGames } from "../../mocks/Games/Games";
 
 export const Matches = () => {
   const [selectedGame, setSelectedGame] = useState<IGames | null>(Games[0]);

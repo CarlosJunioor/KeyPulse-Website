@@ -1,13 +1,8 @@
 import { GamesCard } from "../GamesCard";
-import Valorant from "../../assets/images/Valorant.jpg";
 import Bright from "../../assets/images/bright.svg";
 import BrightWhite from "../../assets/images/bright-white.svg";
-import LeagueOfLegends from "../../assets/images/LeagueOfLegends.jpg";
-import LogoLOL from "../../assets/images/League-of-Legends-Logo.png";
-import LogoValorant from "../../assets/images/valorant-logo.png";
-import LogoWildRift from "../../assets/images/wild-rift-logo.png";
-import WildRift from "../../assets/images/WildRift.png";
 import { SectionTitle } from "../SectionTitle";
+import { Games } from "../../mocks/Games/Games";
 
 export const TeamsGames = () => {
   return (
@@ -22,27 +17,16 @@ export const TeamsGames = () => {
 
         <div className="max-w-7xl w-full overflow-hidden relative h-full">
           <div className="flex gap-2 justify-center flex-wrap pb-10 z-50 mt-10">
-            <div className="rounded-md">
-              <GamesCard
-                image={Valorant}
-                alt="Valorant Team"
-                logo={LogoValorant}
-              />
-            </div>
-            <div className="rounded-md">
-              <GamesCard
-                image={LeagueOfLegends}
-                alt="League of legends Team"
-                logo={LogoLOL}
-              />
-            </div>
-
-            <div className="rounded-md">
-              <GamesCard
-                image={WildRift}
-                alt="Wild Tift Team"
-                logo={LogoWildRift}
-              />
+            <div className="flex gap-2 overflow-hidden">
+              {Games.map((game) => (
+                <a key={game.id} href={`/teams?teams=${game.name.toString()}`}>
+                  <GamesCard
+                    image={game.banner}
+                    alt={game.name}
+                    logo={game.logo}
+                  />
+                </a>
+              ))}
             </div>
             <div className="flex w-full"></div>
           </div>

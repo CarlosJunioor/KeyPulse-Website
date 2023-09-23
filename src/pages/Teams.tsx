@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { GameSelect } from "../components/GameSelect";
-import { Games } from "../mocks/Options/Games";
+import { Games } from "../mocks/Games/Games";
 import { PlayerCard } from "../components/PlayerCard";
 import PlayerImg from "../mocks/Players/playerExample.png";
+import BlueBall from "../assets/images/BlueBall.svg";
+import OrangeBall from "../assets/images/orangeBall.svg";
 
 export const Teams = () => {
   const [selectedGame, setSelectedGame] = useState<number | null>(null);
@@ -11,6 +13,7 @@ export const Teams = () => {
   let selectedGameName = searchParams.get("teams");
 
   if (!selectedGameName && Games.length > 0) {
+    console.log(Games.length);
     selectedGameName = Games[0].name;
     searchParams.set("teams", selectedGameName);
     window.history.replaceState({}, "", `?${searchParams.toString()}`);
@@ -26,13 +29,25 @@ export const Teams = () => {
   };
 
   return (
-    <main className="min-h-screen pt-40">
+    <main className="min-h-screen pt-40 relative">
       <div className="flex justify-center">
         <div className="w-full max-w-md flex justify-center items-center">
           <GameSelect onSelect={handleGameSelect} selectedGame={selectedGame} />
         </div>
       </div>
-      <div className="flex flex-wrap justify-center pt-20">
+      <div className="flex flex-wrap justify-center pt-20 gap-6">
+        <PlayerCard
+          img={PlayerImg}
+          name="Mads Brock-Pedersen"
+          nickName="Broxahlol"
+          position="Jungler"
+        />
+        <PlayerCard
+          img={PlayerImg}
+          name="Mads Brock-Pedersen"
+          nickName="Broxahlol"
+          position="Jungler"
+        />
         <PlayerCard
           img={PlayerImg}
           name="Mads Brock-Pedersen"
@@ -40,6 +55,10 @@ export const Teams = () => {
           position="Jungler"
         />
       </div>
+
+      <img src={BlueBall} className="absolute right-0 bottom-0" />
+
+      <img src={OrangeBall} className="absolute -top-60 -left-72" />
     </main>
   );
 };

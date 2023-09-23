@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Games } from "../mocks/Options/Games";
+import { Games } from "../mocks/Games/Games";
 
 interface Game {
   id: number;

@@ -1,4 +1,4 @@
-import { Games } from "../mocks/Options/Games";
+import { Games } from "../mocks/Games/Games";
 import clsx from "clsx";
 import { useEffect } from "react";
 
