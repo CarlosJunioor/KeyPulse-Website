@@ -1,14 +1,9 @@
 import { motion } from "framer-motion";
-import { Games } from "../mocks/Games/Games";
-
-interface Game {
-  id: number;
-  name: string;
-}
+import { Games, IGames } from "../mocks/Games/Games";
 
 interface IMatchesMenuProps {
-  selectedGame: Game | null;
-  setSelectedGame: React.Dispatch<React.SetStateAction<Game | null>>;
+  selectedGame: IGames | null;
+  setSelectedGame: React.Dispatch<React.SetStateAction<IGames | null>>;
 }
 
 export const MatchesMenu = ({
