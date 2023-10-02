@@ -14,8 +14,6 @@ interface MatchesCardProps {
   data: MatchData;
 }
 
-// TODO: Update the TSX below to use real data.
-
 export const MatchesCard: React.FC<MatchesCardProps> = ({ data }) => {
   return (
     <div className="w-full shadow-lg shadow-orange-primary/5">
@@ -34,14 +32,14 @@ export const MatchesCard: React.FC<MatchesCardProps> = ({ data }) => {
           <p className="font-medium md:text-lg text-gray-200">KEYPULSE</p>
         </div>
       </div>
-      <div className="w-full flex">
+      <div className="w-full flex h-full">
         <div className="flex flex-col flex-1 text-start pl-5 bg-dark-secondary py-1 w-full pr-2">
           <h2 className="text-neutral-100 font-medium">{data?.game}</h2>
-          <p className="text-sm text-left text-neutral-300 overflow-hidden overflow-ellipsis whitespace-nowrap">
+          <p className="text-sm text-left text-neutral-300 overflow-hidden overflow-ellipsis">
             {data?.championship}
           </p>
         </div>
-        <div className="w-[120px] self-end bg-orange-primary text-white flex flex-col justify-center items-center py-1">
+        <div className="w-[120px] bg-orange-primary text-white flex flex-col justify-center items-center">
           <h3 className="font-medium">{data?.hour}</h3>
           <p>{data?.date}</p>
         </div>

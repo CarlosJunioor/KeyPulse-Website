@@ -44,9 +44,6 @@
   -webkit-text-stroke: 1px #ff6c1a;
 }
 
-.bg-fade {
-  background-image: url("./assets/images/bg-fade.png");
-}
 .fade {
   background-image: url("./assets/images/fade.png");
 }
@@ -108,6 +105,6 @@
     rgba(07, 07, 07, 0.1),
     rgba(07, 07, 07, 0.3),
     rgba(07, 07, 07, 1)
-  ); /* Gradiente de 50% de transparência para preto */
+  );
   z-index: -1;
 }

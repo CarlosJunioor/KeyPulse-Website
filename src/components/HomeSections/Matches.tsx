@@ -13,7 +13,7 @@ export const Matches = () => {
   const [selectedGame, setSelectedGame] = useState<IGames | null>(Games[0]);
 
   return (
-    <div className="flex justify-center items-center fade bg-cover bg-center h-[562px]">
+    <div className="flex justify-center items-center fade bg-cover bg-center min-h-[562px] h-full">
       <div className="flex lg:flex-row flex-col justify-between items-center w-full max-w-7xl">
         <div className="w-full">
           <h2 className="text-5xl mb-16 lg:mb-o text-start font-black text-gray-100 ml-6 lg:ml-0">

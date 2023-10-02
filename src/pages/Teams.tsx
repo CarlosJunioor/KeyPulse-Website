@@ -13,7 +13,6 @@ export const Teams = () => {
   let selectedGameName = searchParams.get("teams");
 
   if (!selectedGameName && Games.length > 0) {
-    console.log(Games.length);
     selectedGameName = Games[0].name;
     searchParams.set("teams", selectedGameName);
     window.history.replaceState({}, "", `?${searchParams.toString()}`);

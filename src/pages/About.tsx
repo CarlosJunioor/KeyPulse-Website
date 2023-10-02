@@ -118,7 +118,7 @@ export default function About() {
 
       <section className="py-40">
         <h1 className="text-2xl md:text-3xl font-black">OS NOSSOS VALORES</h1>
-        <div className="max-w-6xl flex flex-col gap-8 mt-16">
+        <div className="max-w-6xl flex flex-col gap-8 mt-16 overflow-hidden">
           <TeamValues
             imageSrc={Passion}
             title="Paixão e Integridade"
