@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,52 +13,41 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
 * {
   scrollbar-width: thin;
   scrollbar-color: primary;
 }
-
 *::-webkit-scrollbar {
   width: 12px;
 }
-
 *::-webkit-scrollbar-track {
   background: #070707;
   border-radius: 5px;
 }
-
 *::-webkit-scrollbar-thumb {
   background-color: #fd690f;
   border-radius: 14px;
   border: 3px solid #070707;
 }
-
 *::-webkit-scrollbar-thumb:hover {
   background-color: #f9c91f;
 }
-
 .footer-stroke {
   color: transparent;
   -webkit-text-stroke: 1px #ff6c1a;
 }
-
 .fade {
   background-image: url("./assets/images/fade.png");
 }
-
 .bg-texture {
   background-image: url("./assets/images/texture.png");
 }
-
 .bg-playerTexture {
   background-image: url("./assets/images/player-texture.png");
 }
-
 .bg-home {
   background-image: url("./assets/images/home-bg.png");
 }
-
 .gradient {
   background: radial-gradient(
     423.59% 50.02% at 50% 42.34%,
@@ -71,30 +59,25 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .swiper-pagination-bullet {
   width: 12px !important;
   height: 12px !important;
   opacity: 0.7 !important;
   background-color: #fff !important;
 }
-
 .swiper-pagination-bullet-active {
   opacity: 1 !important;
   background-color: #ff6b00 !important;
 }
-
 .swiper-pagination {
   position: absolute;
   bottom: -42px !important;
 }
-
 .swiper-button-next,
 .swiper-button-prev {
   margin: 0px !important;
   color: #dcdcdc !important;
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -107,4 +90,28 @@
     rgba(07, 07, 07, 1)
   );
   z-index: -1;
+}
+.news-card {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  max-width: 600px; 
+}
+
+.news-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #1DA1F2; 
+}
+
+.news-post {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.news-photo {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
