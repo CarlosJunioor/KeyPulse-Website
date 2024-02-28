@@ -29,6 +29,7 @@ export const Matches = () => {
     teamHomeLabel:string;
     photoHome: string;
     photoVisitor: string;
+    url: string; // Add URL to match data
   }>>([]);
   useEffect(() => {
     const fetchMatches = async () => {
@@ -59,12 +60,13 @@ export const Matches = () => {
           photoHome: match.PhotoHome ? `data:image/png;base64,${match.PhotoHome}` : Logo, 
           hour: new Date(match.DateTime).toLocaleTimeString("en-US", { hour: '2-digit', minute: '2-digit', hour12: true }),
           date: new Date(match.DateTime).toLocaleDateString("en-US"),
+          url: match.URL // Assign URL from API to match data
         }));
 
         setMatchesData(transformedMatches);
       } catch (error) {
         console.error("Failed to fetch matches data:", error);
-        setMatchesData([]); // Também limpa a lista em caso de erro de fetch
+        setMatchesData([]); // Also clear the list in case of fetch error
       }
     };
 
@@ -72,6 +74,7 @@ export const Matches = () => {
       fetchMatches();
     }
   }, [selectedGame]);
+
   return (
     <div className="flex justify-center items-center fade bg-cover bg-center min-h-[562px] h-full">
       <div className="flex lg:flex-row flex-col justify-between items-center w-full max-w-7xl">
@@ -87,24 +90,26 @@ export const Matches = () => {
             setSelectedGame={setSelectedGame}
           />
           {matchesData.map((match, index) => (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2, duration: 0.5 }}
-          >
-            <MatchesCard 
-            key={match.id}
-            game={match.game}
-            championship={match.championship}
-            teamvisitor={match.teamVisitorLabel}
-            teamhome={match.teamHomeLabel}
-            hour= {match.hour}
-            date= {match.date}
-            imgHome={match.photoHome}
-            imgVisitor={match.photoVisitor}
-            />
-          </motion.div>
-  ))}
+            <motion.div
+              key={match.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
+            >
+              <a href={match.url} target="_blank" rel="noopener noreferrer">
+                <MatchesCard 
+                  game={match.game}
+                  championship={match.championship}
+                  teamvisitor={match.teamVisitorLabel}
+                  teamhome={match.teamHomeLabel}
+                  hour= {match.hour}
+                  date= {match.date}
+                  imgHome={match.photoHome}
+                  imgVisitor={match.photoVisitor}
+                />
+              </a>
+            </motion.div>
+          ))}
           <button className="font-bold text-gray-300 absolute text-xs -bottom-6 right-8 z-10">
             VIEW MORE
           </button>
