@@ -11,6 +11,7 @@ import { Matches } from "../components/HomeSections/Matches";
 export default function Home() {
   return (
     <>
+    <h1>TESTEEEEEEEEEEEE</h1>
       <Greetings />
       <LatestNews />
       <Matches />
