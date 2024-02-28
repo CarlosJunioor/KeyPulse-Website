@@ -4,8 +4,16 @@ import BlueBall from "../assets/images/BlueBall.svg";
 import OrangeBall from "../assets/images/orangeBall.svg";
 import DefaultPlayerImg from "../mocks/Players/playerExample.png";
 
+interface Member {
+  image: string;
+  Name: string;
+  NickName: string;
+  PositionLabel: string;
+  SocialMedia: string[];
+}
+
 export const Teams = () => {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState<Member[]>([]);
 
   useEffect(() => {
     const fetchMembers = async () => {
@@ -49,7 +57,6 @@ export const Teams = () => {
             name={member.Name || "Unknown"}
             nickName={member.NickName || "Unknown"}
             position={member.PositionLabel || "Coach"}
-            socialMedia={member.SocialMedia || []}
           />
         ))}
       </div>
