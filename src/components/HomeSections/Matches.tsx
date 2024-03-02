@@ -8,6 +8,7 @@ import Logo from "../../assets/images/Logo.png";
 
 interface Match {
   Id: string;
+  Championship: string;
   TeamHome: number;
   TeamHomeLabel: string;
   TeamVisitor: number;
@@ -56,17 +57,17 @@ export const Matches = () => {
           }
         );
         const data = await response.json();
-  
+
         if (data.Error && !data.Error.IsSuccess) {
           console.error(data.Error.ErrorMessage);
           setMatchesData([]);
           return;
         }
-  
+
         const transformedMatches = data.Match.map((match: Match) => ({
           id: match.Id,
           game: selectedGame?.name || '', 
-          championship: "",
+          championship: match.Championship,
           teamVisitorLabel: match.TeamVisitorLabel, 
           teamHomeLabel: match.TeamHomeLabel,
           photoVisitor: match.PhotoVisitor ? `data:image/png;base64,${match.PhotoVisitor}` : Logo, 
@@ -74,14 +75,14 @@ export const Matches = () => {
           hour: new Date(match.DateTime).toLocaleTimeString("en-US", { hour: '2-digit', minute: '2-digit', hour12: true }),
           date: new Date(match.DateTime).toLocaleDateString("en-US"),
         }));
-        
+
         setMatchesData(transformedMatches);
       } catch (error) {
         console.error("Failed to fetch matches data:", error);
         setMatchesData([]); // Também limpa a lista em caso de erro de fetch
       }
     };
-  
+
     if (selectedGame) {
       fetchMatches();
     }
