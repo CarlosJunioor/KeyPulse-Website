@@ -5,6 +5,7 @@ interface PlayerCardProps {
   name: string;
   nickName: string;
   position: string;
+  role: string;
   instagram?: string;
   twitter?: string;
 }
@@ -14,13 +15,14 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({
   name,
   nickName,
   position,
+  role,
   instagram,
   twitter,
 }) => {
   return (
     <div className="bg-playerTexture max-w-xs relative shadow-2xl shadow-orange-primary/10 group">
       <div className="px-8 pt-5">
-        <img src={img} />
+      <img src={img} alt="Player" />
         <div className="absolute top-5 right-5 gap-2 flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <a href={instagram}>
             <RiInstagramFill
@@ -42,6 +44,7 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({
           {nickName.toUpperCase()}
         </h1>
         <p>{position.toUpperCase()}</p>
+        <p>{role.toUpperCase()}</p>
       </div>
     </div>
   );
