@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useState, useEffect } from "react";
 import { MatchesCard } from "../MatchesCard";
 import { MatchesMenu } from "../MatchesMenu";
 import { motion } from "framer-motion";
@@ -9,19 +8,6 @@ import Logo from "../../assets/images/Logo.png";
 interface Match {
   Id: string;
   Championship: string;
-  TeamHome: number;
-  TeamHomeLabel: string;
-  TeamVisitor: number;
-  TeamVisitorLabel: string;
-  PhotoVisitor: string;
-  PhotoHome: string;
-  DateTime: string;
-  URL: string;
-}
-import Logo from "../../assets/images/Logo.png";
-
-interface Match {
-  Id: string;
   TeamHome: number;
   TeamHomeLabel: string;
   TeamVisitor: number;
@@ -91,7 +77,6 @@ export const Matches = () => {
     <div className="flex justify-center items-center fade bg-cover bg-center min-h-[562px] h-full">
       <div className="flex lg:flex-row flex-col justify-between items-center w-full max-w-7xl">
         <div className="w-full">
-          <h2 className="text-5xl mb-16 lg:mb-0 text-start font-black text-gray-100 ml-6 lg:ml-0">
           <h2 className="text-5xl mb-16 lg:mb-0 text-start font-black text-gray-100 ml-6 lg:ml-0">
             UPCOMING <br />
             <span className="text-orange-primary">MATCHES</span>
